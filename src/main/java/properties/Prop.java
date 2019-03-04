@@ -3,32 +3,29 @@ package properties;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.logging.Logger;
-
-import static java.lang.System.getProperty;
 
 public class Prop {
 
-    private Properties prop = new Properties();
+    private static final String CONFIG_FILE = "src/main/resources/config.properties";
     private String userEmail;
     private String userPassword;
     private String webDriverPath;
-    private final static String CONFIG_FILE = "src/main/resources/config.properties";
-    public Logger log = Logger.getLogger(this.getClass().getSimpleName());
+    private String browser;
 
     public Prop() {
-        InputStream inputStream;
+         InputStream inputStream;
         try {
             inputStream = new FileInputStream(CONFIG_FILE);
+            Properties prop = new Properties();
             prop.load(inputStream);
 
             userEmail = prop.getProperty("user.email");
             userPassword = prop.getProperty("user.password");
             webDriverPath = prop.getProperty("webdriver.path");
-
+            browser = prop.getProperty("browser");
         } catch (java.io.IOException e) {
             e.printStackTrace();
-            log.info("Configuration file is not found!");
+
         }
     }
 
@@ -44,8 +41,8 @@ public class Prop {
         return webDriverPath;
     }
 
-    private String getPropValue(String propName) {
-        return getProperty(propName, "").isEmpty() ? prop.getProperty(propName) : getProperty(propName);
+    public String getBrowser() {
+        return browser;
     }
 
 }

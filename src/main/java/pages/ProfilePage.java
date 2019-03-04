@@ -7,7 +7,7 @@ public class ProfilePage extends BasePage {
     public void openAboutTab() {
         waitForElement(ABOUT_BUTTON);
         driver.findElement(ABOUT_BUTTON).click();
-        log.info("About button was clicked correctly");
+        LOG.info("About button was clicked correctly");
     }
 
 }

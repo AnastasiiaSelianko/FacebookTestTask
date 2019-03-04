@@ -12,17 +12,19 @@ public class ServiceHooks {
     private Prop prop = new Prop();
     private String userEmail = prop.getUserEmail();
     private String userPassword = prop.getUserPassword();
+    private String browser = prop.getBrowser();
 
-    public ServiceHooks() {
-    }
+   /* public ServiceHooks() {
+    }*/
 
     @Before
     public void initializeTest() {
+        loginPage.setUpTest(browser);
         loginPage.loginFacebook(userEmail, userPassword);
     }
 
     @After
-    public void embedScreenshot(Scenario scenario) {
+    public void embedScreenShot(Scenario scenario) {
         if (scenario.isFailed()) {
             try {
                 loginPage.closeBrowser();
@@ -32,4 +34,5 @@ public class ServiceHooks {
         }
         loginPage.closeBrowser();
     }
+
 }

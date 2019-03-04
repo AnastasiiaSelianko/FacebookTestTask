@@ -18,13 +18,13 @@ public class ProfileSteps {
     }
 
     @And("^About tab is opened.$")
-    public void aboutTabIsOpened() throws Exception {
+    public void aboutTabIsOpened() {
         profilePage.openAboutTab();
     }
 
     @And("^Work and Education section is opened.$")
     public void workAndEducationSectionIsOpened() {
-        aboutPage.openWorkEducationsection();
+        aboutPage.openWorkEducationSection();
     }
 
     @And("^Add Workplace section is opened.$")
@@ -68,4 +68,5 @@ public class ProfileSteps {
         aboutPage.clickOnRemoveButton();
         aboutPage.clickOnSaveButton();
     }
+
 }

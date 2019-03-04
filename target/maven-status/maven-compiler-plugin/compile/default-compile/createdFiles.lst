@@ -1,7 +1,0 @@
-pages\BasePage.class
-pages\LoginPage.class
-page_elements\LoginPageElements.class
-pages\AboutPage.class
-properties\Prop.class
-pages\NewsFeedPage.class
-pages\ProfilePage.class
