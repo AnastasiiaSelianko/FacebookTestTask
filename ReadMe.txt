@@ -25,4 +25,6 @@
 |   |   |---config.properties
 
 
+I selected these scenarios cause its functional tests and it can be runned on regression. It was taken 4h.
+I used tools Cucumber, Selenium Webdriver, Java, TestNG and Maven to build project
 
