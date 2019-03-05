@@ -35,4 +35,4 @@ Maven -  to build project
 Checkstyle Maven plugin - for code review 
 Cucumber reports - to create reports 
 
-As for me if it big project i would be use also Spring and Allure 
+For big project i would be use also Spring and Allure 
