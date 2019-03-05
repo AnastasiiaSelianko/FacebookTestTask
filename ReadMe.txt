@@ -15,7 +15,7 @@
 |---pom.xml
 |---testng.xml
 
-1) In config.properties set login and password to login Facebook. Notice test fb user shouln't have any Professional Skill 
+1) In config.properties set login and password to login Facebook. Notice test fb user shouldn't have any Professional Skill 
 2) You can run test on Chrome & Edge, so please in config.properties set path to drivers
 
 +---.idea
