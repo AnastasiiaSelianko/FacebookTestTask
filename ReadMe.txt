@@ -27,7 +27,7 @@
 
 UI tests are not stable(always) and take a lot of time, so I think that it is necessary to automate those tests that will be used on the regression testing and the scenarios should be positive
 
-Toold that was used:
+Tools that was used:
 Cucumber - convenient BDD Framework 
 Selenium Web Driver - in order to manage work the browser
 TestNG - for annotations and runner
