@@ -13,5 +13,5 @@ Feature:  As an existing user I want to be able to add my professional skills.
     But Delete <skill> after test.
 
     Examples:
-      | skill                              |
-      | Motivated                          |
+      | skill          |
+      | Accountability |

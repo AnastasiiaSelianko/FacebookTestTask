@@ -63,8 +63,8 @@ public class LoginPage extends BasePage {
     public void closeBrowser() {
         logOutFacebook();
         driver.close();
-        driver.quit();
         LOG.info("Browser has been closed correctly");
+
     }
 
 }

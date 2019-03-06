@@ -27,25 +27,12 @@ public class ProfileSteps {
         aboutPage.openWorkEducationSection();
     }
 
-    @And("^Add Workplace section is opened.$")
-    public void addWorkplaceSectionIsOpened() {
-        aboutPage.addWorkplace();
-    }
 
     @And("^Add a Professional Skill section is opened.$")
     public void addAProfessionalSkillSectionIsOpened() {
         aboutPage.addProfessionalSkills();
     }
 
-    @And("^Add University section is opened.$")
-    public void addUniversitySectionIsOpened() {
-        aboutPage.addUniversity();
-    }
-
-    @And("^Add School section is opened.$")
-    public void addSchoolSectionIsOpened() {
-        aboutPage.addSchool();
-    }
 
     @When("^User set (.*) to skills field.$")
     public void userSetSkillToSkillsField(String skill) throws Exception {
@@ -59,7 +46,9 @@ public class ProfileSteps {
 
     @Then("^Professional (.*) successfully added.$")
     public void professionalSkillsSuccessfullyAdded(String skill) {
-        Assert.assertTrue(aboutPage.isProfessionalSkillAdded(skill));
+        Assert.assertTrue(aboutPage.isProfessionalSkillAdded());
+        Assert.assertEquals(aboutPage.getProfSkillName().toLowerCase(), skill.toLowerCase());
+
     }
 
     @But("^Delete (.*) after test.$")

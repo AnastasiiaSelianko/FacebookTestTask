@@ -7,7 +7,7 @@ Feature:  As an existing user I want to be able to add my current and past unive
     And Add University section is opened.
 
   Scenario Outline: Check that user can add past university.
-    When User set <university> to educaation field.
+    When User set <university> to education field.
     When User set education <start date>.
     When User set education <finish date>.
     And User click on Save changes.
@@ -19,7 +19,7 @@ Feature:  As an existing user I want to be able to add my current and past unive
 
 
   Scenario Outline: Check that user can add past university.
-    When User set <university> to educaation field.
+    When User set <university> to education field.
     When User set education <start date>.
     When User set education <finish date>.
     And User click on Save changes.
