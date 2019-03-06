@@ -1,6 +1,5 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 
@@ -40,11 +39,11 @@ public class AboutPage extends BasePage {
         LOG.info("Save button was clicked correctly");
     }
 
-   public boolean isProfessionalSkillAdded() {
+    public boolean isProfessionalSkillAdded() {
         return driver.findElement(SKILL_ADDED).isDisplayed();
     }
 
-    public String getProfSkillName(){
+    public String getProfSkillName() {
         return driver.findElement(SKILL_ADDED).getText();
     }
 
@@ -60,6 +59,5 @@ public class AboutPage extends BasePage {
         driver.findElement(REMOVE_BUTTON).click();
         LOG.info("Remove button was clicked correctly");
     }
-
 
 }
